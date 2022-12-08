@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <form action="xu_ly_thong_tin.php" method="post">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            Họ tên:
+            <input name="hoten" />
+            <br>
+            Email:
+            <input name="email" type="email" />
+            <br>
+            Mật khẩu:
+            <input type="password" name="password" />
+            <br>
+            Giới tính:
+            <input type="radio" name="gioitinh" value="1" checked > Nữ
+            <input type="radio" name="gioitinh" value="0"> Nam
+
+            <br>
+            Sở thích:
+            <input type="checkbox" value="an">Ăn
+            <input type="checkbox" value="ngu">Ngủ
+            <input type="checkbox" value="boi">Bơi
+            <input type="checkbox" value="choi">Chơi
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin học vấn</legend>
+            Điểm: <input name="diem" type="number" value="9.4" />
+            <br>
+            Trình độ:
+            <select name="hocvan">
+                <option value="THPT">THPT</option>
+                <option value="DH">Đại học</option>
+                <option value="CH">Cao học</option>
+            </select>
+            <br>
+            tâm tư:
+            <textarea name="ghichu" rows="4" cols="30"></textarea>
+        </fieldset>
+
+        <button type="submit">Gửi</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</body>
+</html>
