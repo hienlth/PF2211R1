@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>BÀI TẬP NGÀY-THÁNG-NĂM</h2>
+    <div>
+        Ngày: <input id="ngay" type="number" min="1" max="31" />
+        <br>
+        Tháng: <input id="thang" type="number" min="1" max="12" />
+        <br>
+        Năm: <input id="nam" type="number" />
+    </div>
+    <button type="button" style="background-color: aqua;" onclick="xu_ly_hien_thi()">
+        Hiển thị
+    </button>
+    <div id="ket_qua"></div>
+    <script>
+        function xu_ly_hien_thi(){
+            let sNgay = document.getElementById("ngay").value;
+            let sThang = document.getElementById("thang").value;
+            let sNam= document.getElementById("nam").value;
+
+            let ketQua = sNgay + "-" + sThang + "-" + sNam;
+            document.getElementById("ket_qua").innerHTML = ketQua;
+        }
+    </script>
+</body>
+</html>
