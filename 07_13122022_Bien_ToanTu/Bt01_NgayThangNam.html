@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .nhap-lieu{
+            width: 80px;
+        }
+    </style>
 </head>
 <body>
     <h2>BÀI TẬP NGÀY-THÁNG-NĂM</h2>
     <div>
-        Ngày: <input id="ngay" type="number" min="1" max="31" />
+        Ngày: <input id="ngay" type="number" min="1" max="31" class="nhap-lieu" />
         <br>
-        Tháng: <input id="thang" type="number" min="1" max="12" />
+        Tháng: <input id="thang" type="number" min="1" max="12" class="nhap-lieu" />
         <br>
-        Năm: <input id="nam" type="number" />
+        Năm: <input id="nam" type="number" class="nhap-lieu" value="2022" />
     </div>
     <button type="button" style="background-color: aqua;" onclick="xu_ly_hien_thi()">
         Hiển thị
@@ -25,7 +30,9 @@
             let sThang = document.getElementById("thang").value;
             let sNam= document.getElementById("nam").value;
 
-            let ketQua = sNgay + "-" + sThang + "-" + sNam;
+            // kiểm tra dữ liệu hợp lệ
+
+            let ketQua = "<b>" + sNgay + "-" + sThang + "-" + sNam + "</b>";
             document.getElementById("ket_qua").innerHTML = ketQua;
         }
     </script>
