@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input id="du_lieu_nhap" onchange="xuLyThayDoiText()"
+    onkeyup="xuLyGoPhim()" />
+<br>
+Bạn đang nhập: 
+<div id="ketqua" style="color: blue;"></div>
+<div id="kq"></div>
+<script>
+    function xuLyGoPhim() {
+        let gia_tri_nhap = document.getElementById("du_lieu_nhap").value;
+
+        document.getElementById("kq").innerHTML = gia_tri_nhap;
+    }
+    function xuLyThayDoiText(){
+        let gia_tri_nhap = document.getElementById("du_lieu_nhap").value;
+
+        document.getElementById("ketqua").innerHTML = gia_tri_nhap;
+    }
+</script>
+</body>
+</html>
