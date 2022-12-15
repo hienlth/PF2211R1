@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">Đoạn 1</p>
+        <p id="p2">Đoạn 2</p>
+    </div>
+    <script>
+        // tạo đoạn 3
+        let pa_3 = document.createElement("p");// <p></p>
+        pa_3.innerHTML = '<b>Đoạn số 3</b>';//<p><b>Đoạn số 3</b></p>
+
+        let pa_1 = document.getElementById("p1");
+        let mydiv = document.getElementById("div1");
+
+        //chèn đoạn 3 trước đoạn 1 nhưng trong div1
+        mydiv.insertBefore(pa_3, pa_1);
+    </script>
+</body>
+</html>

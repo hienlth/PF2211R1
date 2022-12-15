@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>MERRY CHRISTMAS</div>
+    <div>HAPPY NEW YEAR</div>
+    <div>Giải lao 8 phút - 8:32PM</div>
+    <script>
+        let divs = document.getElementsByTagName("div");
+        document.write(`Có ${divs.length} thẻ div`);
+        //duyệt qua ds thẻ div và thay đổi nội dung và màu sắc
+        for (let index in divs){
+            divs[index].innerHTML = `${index}. ${divs[index].innerHTML}`;
+            divs[index].style.color = "blue";
+        }
+    </script>
+</body>
+</html>

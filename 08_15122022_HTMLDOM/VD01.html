@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Merry Christmas and Happy New Year 2023</p>
+    <script>
+        let p_tag = document.getElementById("demo");
+        document.write(p_tag.innerHTML);
+
+        p_tag.style.color = "red";
+        let chuoi = "<b>" + p_tag.innerHTML + "</b>";
+        p_tag.innerHTML = chuoi;
+        // p_tag.innerText = chuoi;
+
+        let mydiv = document.createElement("div");
+        mydiv.innerHTML = "MYDIV"; //"<div>MYDIV</div>"
+        p_tag.appendChild(mydiv);
+
+        console.log("HELLOO");
+    </script>
+</body>
+</html>
