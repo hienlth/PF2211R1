@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Nhập số:<br>
+        <input id="so_nhap" type="number" />
+        <button type="button" 
+            onclick="kiemTraSoChan()">Kiểm tra</button>
+    </div>
+    <script>
+        function kiemTraSoChan(){
+            let giaTri = document.getElementById("so_nhap").value;
+            // let thongBao = `Bạn vừa nhập: ${giaTri}\n`;
+            let thongBao = '';
+
+            if (thongBao !== '') {
+                let soDu = giaTri % 2;
+
+                if (soDu === 0) {
+                    thongBao += `${giaTri} là số chẵn`;
+                } else {
+                    thongBao += `${giaTri} là số lẻ`;
+                }
+
+                alert(thongBao);
+            }            
+        }
+    </script>
+</body>
+</html>
