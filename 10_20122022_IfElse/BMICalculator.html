@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+Sử dụng function: prompt() để người dùng nhập chiều cao, sau đó chuyển kiểu về number. Sử dụng thêm function: prompt() nữa để người dùng nhập cân nặng, sau đó chuyển kiểu về number. 
+Sau đó dựa vào chiều cao và cân nặng để tính ra chỉ số BMI.
+
+Dùng chỉ số BMI vừa được tính để in ra kết quả phù hợp:
+Nếu BMI > 40: in ra béo phì cấp độ III
+Hoặc nếu 35 <= BMI < 40: in ra béo phì cấp độ II
+Hoặc nếu 30 <= BMI < 35: in ra béo phì cấp độ I
+Hoặc nếu 25 <= BMI < 30: in ra thừa cân
+Hoặc nếu 18.5 <= BMI < 25: in ra bình thường
+Hoặc nếu 17 <= BMI < 18.5: in ra gầy cấp độ I
+Hoặc nếu 16 <= BMI < 17: in ra gầy cấp độ II
+Hoặc BMI < 16: in ra gầy cấp độ III
+    </pre>
+    <script>
+        let chieuCao = prompt("Nhập chiều cao (m):");
+        let canNang = prompt("Nhập cân nặng (kq):");
+        if (chieuCao !== null && canNang !== null) {
+            chieuCao = parseFloat(chieuCao);
+            canNang = parseFloat(canNang);
+
+            let BMI = canNang / (chieuCao * chieuCao);
+        }
+    </script>
+</body>
+</html>
