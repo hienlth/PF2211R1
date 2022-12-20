@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hiện thông báo (prompt) yêu cầu người dùng có muốn thoát chương trình hay không?</h3>
+    <ul>
+        <li>Nếu nhập C (c) : Thông báo chào tạm biệt</li>
+        <li>Nếu nhập chữ khác: Thông báo: Tiếp tục làm việc</li>
+    </ul>
+    <script>
+        let traLoi = prompt('Bạn có muốn thoát chương trình hay không (C/K)?');
+        if (traLoi.toUpperCase() == "C") {
+            alert("Chào tạm biệt");
+        } else {
+            alert('Mời bạn tiếp tục làm việc!!!');
+        }
+    </script>
+</body>
+</html>
