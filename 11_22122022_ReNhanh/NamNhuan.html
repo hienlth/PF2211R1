@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>KIỂM TRA NĂM/THÁNG</h2>
+    <pre>
+        - Năm nhập có phải là năm nhuận không?
+        - Tháng thuộc năm nhập có bao nhiêu ngày?
+    </pre>
+    <form>
+        Năm: <input id="nam" type="number" min="1900" />
+        <br>
+        Tháng: <input id="thang" type="number" min="1" max="12" />
+        <br>
+        <button type="button" onclick="kiemTraNamThang()">Kiểm tra</button>
+    </form>
+    <div id="ketqua"></div>
+    <script>
+        function kiemTraNamThang(){
+            let nam = document.getElementById("nam").value;
+            let thang = document.getElementById("thang").value;
+
+            // nếu có nhập cả 2: năm & tháng
+            if (nam != "" && thang != '') {
+                nam = parseInt(nam);
+                thang = parseInt(thang);
+
+                let laNamNhuan = false;
+                if (nam % 400 == 0) {
+                    laNamNhuan = true;
+                } else if ((nam % 4 == 0) && (nam % 100 != 0)) {
+                    laNamNhuan = true;
+                } else {
+                    laNamNhuan = false;
+                }
+
+                let chuoi = "";
+                if (laNamNhuan) {// laNamNhuan == true
+                    chuoi += `${nam} là năm nhuận.`;
+                } else {
+                    chuoi += `${nam} là năm không nhuận.`;
+                }
+                document.getElementById("ketqua").innerHTML = chuoi;
+
+            } else {
+                alert("Vui lòng nhập đầy đủ năm/tháng.")
+            }
+        }
+    </script>
+</body>
+</html>
