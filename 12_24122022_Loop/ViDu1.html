@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Bài tập: In ra màn hình 2022 lần dòng chữ:
+        "MERRY CHRISTMAS 2022"
+    </pre>
+    <div id="ketQua"></div>
+    <script>
+        const NAM = 2022;
+
+        for (let index = 1; index <= NAM; index++) {
+            // document.write(`MERRY CHRISTMAS ${index}<br>`)
+            document.getElementById("ketQua").innerHTML += `MERRY CHRISTMAS ${index}<br>`;
+        }
+    </script>
+</body>
+</html>

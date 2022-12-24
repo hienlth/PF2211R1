@@ -9,12 +9,12 @@
 <body>
     <script>
         let namDuongLich = prompt("Nhập vào năm dương lịch");
-        if(namDuongLich !== "") {
+        if (namDuongLich !== "") {
             namDuongLich = parseInt(namDuongLich);
 
             let ketQua = "";
 
-            switch(namDuongLich % 10){
+            switch (namDuongLich % 10){
                 case 0: ketQua += "Canh"; break;
                 case 1: ketQua += "Tân"; break;
                 case 2: ketQua += "Nhâm"; break;
@@ -46,6 +46,7 @@
 
             alert(`Năm âm lịch của ${namDuongLich} là ${ketQua}`);
         }
+        
     </script>
 </body>
 </html>
