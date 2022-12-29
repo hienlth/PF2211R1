@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        function kiemTraSoNguyenTo(soNguyen){
+            let laSoNguyenTo = true;
+            for (let i = 2; i < soNguyen; i++) {
+                if (soNguyen % i == 0)//chia hết
+                {
+                    laSoNguyenTo = false;
+                    break;//dừng vòng lặp
+                }
+            }
+            return laSoNguyenTo;
+        }
+
+        // bước 1
+        let numbers;
+        numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in:"));
+
+        //bước 2
+        let count = 0;
+
+        //bước 3
+        let N = 2;
+
+        //bước 4: Lặp
+        while (count < numbers){
+            if (kiemTraSoNguyenTo(N)) {
+                document.write(N + ", ");
+                count++;
+            }
+            N++;
+        }
+    </script>
+</body>
+</html>
