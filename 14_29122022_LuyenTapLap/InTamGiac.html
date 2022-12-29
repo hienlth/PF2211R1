@@ -7,28 +7,64 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="tamgiac_1"></div>
+    <hr>
+    <div id="tamgiac_2"></div>
+    <hr>
+    <div id="tamgiac_3" style="text-align: right;"></div>
+    <hr>
+    <div id="tamgiac_4" style="text-align: right;"></div>
+    <hr>
+    <div id="tamgiac_5"></div>
     <script>
         let N = 5;
         // dòng i vẽ i dấu *
 
+        let ketqua = "";
         for (let dong = 1; dong <= N; dong++) {
             for (let i = 1; i <= dong; i++) {
-                document.write("*");
+                // document.write("*");
+                ketqua += "*";
             }
-            document.write("<br>");
+            // document.write("<br>");
+            ketqua += "<br>";
         }
+        document.getElementById("tamgiac_1").innerHTML = ketqua;
+        document.getElementById("tamgiac_3").innerHTML = ketqua;
 
-        document.write("<hr/>");
+        // document.write("<hr/>");
 
+        let kq2 = "";
         for (let dong = 1; dong <= N; dong++) {
             // for(let i = N - dong + 1; i > 0; i--) {
             //     document.write("*");
             // }
             for (let i = 1; i <= N - dong + 1; i++) {
-                document.write("*");
+                // document.write("*");
+                kq2 += "*";
             }
-            document.write("<br>");
+            // document.write("<br>");
+            kq2 += "<br>";
         }
+        document.getElementById("tamgiac_2").innerHTML = kq2;
+        document.getElementById("tamgiac_4").innerHTML = kq2;
+
+        let kq3 = "";
+        for (let dong = 1; dong <= N; dong++) {
+            let trang = dong - 1;
+            let sao = N - dong + 1;
+            for(let i = 1; i <= trang ; i++) {
+                // in khoang trang &nbsp;
+                kq3 += "&nbsp;"; //html entity
+            }
+            for(let j = 1; j <= sao ; j++) {
+                // in dau sao
+                kq3 += "*";
+            }
+            kq3 += "<br>";
+        }
+        document.getElementById("tamgiac_5").innerHTML = kq3;
+
     </script>
 </body>
 </html>
