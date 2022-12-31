@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Nhập vào số nguyên N, in ra N hàng như sau giả sử N=8
+        1 
+        1 2 
+        1 2 3 
+        1 2 3 4 
+        1 2 3 4 5 
+        1 2 3 4 5 6 
+        1 2 3 4 5 6 7 
+        1 2 3 4 5 6 7 8    
+    </pre>
+    Nhập giá trị N:
+    <input type="number" id="gia_tri_nhap" min="1" style="width: 100px;" />
+    <button onclick="xuLyIn()">In</button>
+    <div id="ket_qua"></div>
+    <script>
+        function xuLyIn() {
+            // alert('HAPPY NEW YEAR');
+            let gia_tri_n = document.getElementById("gia_tri_nhap").value;
+            // alert(`Vừa nhập: ${gia_tri_n}`);
+            if (gia_tri_n === ""){
+                alert("Vui lòng nhập giá trị");
+                return; //kết thúc hàm xuLyIn
+            }
+            let so_N = parseInt(gia_tri_n);
+            let chuoi_ket_qua = "";
+            for (let chi_so_dong = 1; chi_so_dong <= so_N;chi_so_dong++) {
+                for (let j = 1; j <= chi_so_dong; j++){
+                    chuoi_ket_qua += `${j} `;
+                }
+                chuoi_ket_qua += '<br>';
+            }
+
+            document.getElementById("ket_qua").innerHTML = chuoi_ket_qua;
+        }
+    </script>
+</body>
+</html>
