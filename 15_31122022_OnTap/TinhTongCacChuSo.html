@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Tính tổng các chữ số của số nguyên nhập vào
+        N=19001080
+        Tổng 1 + 9 + 0 + 0 + 1 + 0 + 8 + 0 = 19
+    </pre>
+    <script>
+        let so_nhap;
+        so_nhap = parseInt(prompt("Nhập vào số nguyên:"));
+
+        sum = 0;
+        let temp = so_nhap;
+        while (temp > 0) {
+            sum += temp % 10;
+
+            temp = Math.floor(temp / 10);
+        }
+
+        alert(`Tổng các chữ số của ${so_nhap} là ${sum}`);
+    </script>
+</body>
+</html>
