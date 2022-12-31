@@ -3,8 +3,28 @@
 <head>
 </head>
 <body>
+    <pre>
+        N! = 1* 1*2*3*...*(N-1)*N
+        vd: 2! = 1*2 = 2
+            4! = 1*2*3*4= 24
+    </pre>
     Nhập vào giá trị N:
-    <input type="number" />
-    <button>IN</button>
+    <input type="number" id="gia_tri_nhap"/>
+    <button onclick="tinhGiaiThua()">Tính giai thừa của N</button>
+    <div id="ket_qua"></div>
+    <script>
+        function tinhGiaiThua() {
+            let N = parseInt(document.getElementById("gia_tri_nhap").value);
+            if (N !== NaN && N > 0) {
+                let giai_thua = 1;
+                for (let i = 1; i <= N; i++) {
+                    // giai_thua = giai_thua * i;
+                    giai_thua *= i;
+                }
+
+                document.getElementById("ket_qua").innerHTML = `${N}! = ${giai_thua}`;
+            }
+        }
+    </script>
 </body>
 </html>
