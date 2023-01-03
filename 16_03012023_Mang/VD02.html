@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        - Dùng prompt để nhập số lượng phần tử của mảng (N)
+        - Nhập giá trị cho từng phần tử của mảng myArray.
+        - In mảng vừa nhập.
+    </pre>
+    <script>
+        let N = parseInt(prompt("Số lượng phần tử của mảng:"));
+
+        // khai báo mảng rỗng
+        let myArray = [];
+
+        let soLuong = 0;
+        while (soLuong < N) {
+            let temp = parseFloat(prompt(`Nhập phần tử thứ ${soLuong} số thực:`));
+            if (!isNaN(temp)) {
+                myArray.push(temp);
+                soLuong++;
+            }
+        }
+
+        // Xuất
+        alert(myArray);
+    </script>
+</body>
+</html>
