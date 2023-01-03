@@ -21,7 +21,8 @@
         let soLuong = 0;
         while (soLuong < N) {
             let temp = parseFloat(prompt(`Nhập phần tử thứ ${soLuong} số thực:`));
-            if (!isNaN(temp)) {
+            // if (!isNaN(temp))
+            if (isNaN(temp) === false) {
                 myArray.push(temp);
                 soLuong++;
             }

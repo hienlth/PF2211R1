@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let mang = [2023, 12, 29, 27, 9, 2009, 39, 79];
+        console.log('Số phần tử:' + mang.length);
+        // for(let index = 0; index < mang.length; index++) {
+        //     console.log(mang[index]);
+        // }
+        for (let chiSo in mang) {
+            console.log(mang[chiSo]);
+        }
+
+        let text = "";
+        let cars = ["BMW I5", "Huyndai Tuson", "K5"];
+        for (let idx in cars) {
+            text += cars[idx] + "<br>";
+        }
+
+        document.getElementById("result").innerHTML = text;
+
+    </script>
+</body>
+</html>
