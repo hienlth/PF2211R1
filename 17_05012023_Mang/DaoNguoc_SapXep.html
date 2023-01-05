@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["Cherry", "Blueberry", "apple", "banana"];
+        console.log(fruits.join());
+        fruits.reverse();//đảo ngược
+        console.log(fruits.join());
+        fruits.sort();
+        console.log(fruits.join());
+
+        let sos = [9, 11, -3, 0, 5];
+        sos.sort(function(a, b){
+            // Math.abs(): lấy trị tuyệt đối
+            // Math.abs(-5) = 5
+            return Math.abs(b) - Math.abs(a);           
+        });
+        console.log(sos.join());
+
+    </script>
+</body>
+</html>
