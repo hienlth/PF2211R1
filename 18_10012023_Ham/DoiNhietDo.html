@@ -8,12 +8,19 @@
 </head>
 <body>
     <h2>Temperature Converter</h2>
+    <input oninput="console.log('OnInput: ' + this.value)" onchange="console.log('Onchange')" />
     <div>
         Type a value in the Fahrenheit field to convert the value to Celcius
         <br>
         Fahrenheit: <input type="number" id="f_degree" onchange="processConvertF2C()" />
         <br>
         Celcius: <span id="c_degree"></span>
+    </div>
+
+    <div>
+        Fahrenheit: <input oninput="showResult('myC', convertFahrenheitToCelcius(this.value))" id="myF" />
+        
+        Celcius: <input oninput="showResult('myF', convertCelciusToFahrenheit(this.value))" id="myC" />
     </div>
     <script>
         function convertFahrenheitToCelcius(fDegree) {
@@ -24,6 +31,10 @@
         function convertCelciusToFahrenheit(cDegree) {
             // F = (C * 1.8) + 32
             return (cDegree * 1.8) + 32;
+        }
+
+        function showResult(elementId, myvalue) {
+            document.getElementById(elementId).value = myvalue;
         }
 
         function processConvertF2C() {

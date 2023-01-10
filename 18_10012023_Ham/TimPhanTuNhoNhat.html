@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //viết hàm Hàm tìm giá trị nhỏ nhất của mảng
+        // tham số đầu vào: mảng
+        // giá trị trả về: vị trí của phần tử nhỏ nhất
+
+        function timPhanTuNhoNhat(mang) {
+            //giả sử phần tử nhỏ đầu mảng
+            let viTriNhoNhat = 0;
+
+            //chạy từ phần tử thứ 1 đến cuối
+            for(let i = 1; i < mang.length; i++) {
+                // nếu phần tử đang xét còn nhỏ hơn phần tử nhỏ nhất
+                if(mang[i] < mang[viTriNhoNhat]) {
+                    //gán lại phần tử nhỏ nhất
+                    viTriNhoNhat = i;
+                }
+            }
+
+            return viTriNhoNhat;
+        }
+
+        let myArray = [1, 9, -11, 0, 123, -777];
+        let minIndex = timPhanTuNhoNhat(myArray);
+        console.log(`Phần tử nhỏ nhất của mảng ${myArray.join()} là ${myArray[minIndex]} (ở vị trí ${minIndex})`);
+    </script>
+</body>
+</html>
