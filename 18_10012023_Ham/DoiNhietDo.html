@@ -18,9 +18,11 @@
     </div>
 
     <div>
-        Fahrenheit: <input oninput="showResult('myC', convertFahrenheitToCelcius(this.value))" id="myF" />
+        Fahrenheit: <input id="myF" 
+        oninput="showResult('myC', convertFahrenheitToCelcius(this.value))" />
         
-        Celcius: <input oninput="showResult('myF', convertCelciusToFahrenheit(this.value))" id="myC" />
+        Celcius: <input id="myC"
+        oninput="showResult('myF', convertCelciusToFahrenheit(this.value))" />
     </div>
     <script>
         function convertFahrenheitToCelcius(fDegree) {

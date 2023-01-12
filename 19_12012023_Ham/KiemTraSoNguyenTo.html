@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Viết hàm kiểm tra số nguyên tố: function isPrime(number)
+        tham số đầu vào: number (kiểu số)
+        kết quả trả về: true - nếu number là số nguyên tố, ngược lại false
+
+        N gọi là SNT khi N có 2 ước là 1 và N (N chia hết cho i thì gọi i là ước của N)
+        - Chỉ cần chạy biến i từ 2 đến N - 1, kiểm tra N có chia hết cho i hay không
+        VD: N = 9 (9 có chia hết cho 2,3,4,5,6,7,8)
+        - Tối ưu chạy biến i từ 2 đến Math.ceiling(Math.sqrt(N))
+        VD: N = 9 thì i chạy từ 2,3,
+            N = 15 => chạy từ 2,3,4
+
+        Math.ceiling: làm tròn lên, VD: Math.celling(11.01) ==> 12
+            Đọc API có 1231 products, 1 trang chỉ có 30 products ==> có nhiêu trang: Math.celling(1231/30)
+        Math.floor làm tròn xuống, vd: Math.floor(9.9999) ==> 9
+    </pre>
+    <script>
+        function isPrime(number) {
+            if (number < 2) {
+                // console.log('check number < 2')
+                return false;
+            }
+
+            for (let i = 2; i < number; i++) {
+                // console.log(`check number chia het cho ${i}`)
+                if (number % i == 0) {
+                    // console.log('chia het ==> ko nguyen to')
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        function isPrime2(number) {
+            if (number < 2) {
+                return false;
+            }
+
+            for (let i = 2; i < Math.sqrt(number) + 1; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        console.log(isPrime2(29));
+
+        // in ra các số nguyên tố từ 1 đến 2023
+        let mang = [];
+        for (let i = 1; i < 2024; i++) {
+            if (isPrime2(i)) {
+                mang.push(i);
+                console.log(i)
+            }
+        }
+
+        console.log(`Có ${mang.length} số nguyên từ từ 1 đến 2023 là: ${mang.join()}`);
+
+        // In ra 1000 số nguyên tố đầu tiên
+        let run = 2;
+        let myArr = [];
+        while (myArr.length < 1000) {
+            if (isPrime2(run)) {
+                myArr.push(run);
+            }
+
+            run++;
+        }
+        console.log(myArr.join(", "));
+    </script>
+</body>
+</html>
