@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo canvas ARC</h1>
+
+    <canvas id="myCanvas" width="600" height="450" style="border: 1px solid blue;">
+
+    </canvas>
+
+    <script>
+        let myCanvas = document.getElementById("myCanvas");
+        let context = myCanvas.getContext("2d");
+
+        context.beginPath();
+        context.arc(200, 200, 150, 0, 1.8 * Math.PI, false);
+        context.strokeStyle = "red";
+        context.lineWidth = 5;
+        context.stroke();
+
+
+        //vẽ chữ
+        let noidung = "HAPPY TẾT";
+        context.font = "50px Arial";
+        context.fillText(noidung, 100, 100);
+        context.strokeText(noidung, 300, 300);
+
+    </script>
+</body>
+</html>
