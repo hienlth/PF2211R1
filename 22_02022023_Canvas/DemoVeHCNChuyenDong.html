@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border: 1px solid blue;">
+    </canvas>
+
+    <script>
+        let myCanvas = document.getElementById("myCanvas");
+        let context = myCanvas.getContext("2d");
+
+        const KHOANG_CACH = 25;
+        let xDistance = 50;
+        function veHinhChuNhat(y) {
+            //xóa khung vẽ cũ
+            context.clearRect(0, 0, myCanvas.width, 300);
+
+            if (xDistance < myCanvas.width) {
+                xDistance += KHOANG_CACH;
+            } else {
+                xDistance = KHOANG_CACH;
+            }
+            context.fillStyle = "green";
+            context.fillRect(xDistance, y, 77, 77);
+        }
+        
+        veHinhChuNhat(150);
+        // cứ 5 giây (5000ms) thì vẽ hình chữ nhật (dịch chuyển sang phải, đụng tường thì quay lui)
+        setInterval(veHinhChuNhat, 2000, 70);
+;
+        
+    </script>
+</body>
+</html>
