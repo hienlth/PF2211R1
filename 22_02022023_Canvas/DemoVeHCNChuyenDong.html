@@ -9,6 +9,10 @@
 <body>
     <canvas id="myCanvas" width="600" height="600" style="border: 1px solid blue;">
     </canvas>
+    <button type="button" onclick="xuLyDiChuyenTraiPhai()">Di chuyển trái - phải</button>
+    <button onclick="xuLyDungTraiPhai()">Dừng T-P</button>
+    <button type="button">Di chuyển trên - dưới</button>
+    <button>Dừng T-D</button>
 
     <script>
         let myCanvas = document.getElementById("myCanvas");
@@ -16,6 +20,8 @@
 
         const KHOANG_CACH = 25;
         let xDistance = 50;
+        let diChuyenTraiPhai;
+
         function veHinhChuNhat(y) {
             //xóa khung vẽ cũ
             context.clearRect(0, 0, myCanvas.width, 300);
@@ -29,11 +35,18 @@
             context.fillRect(xDistance, y, 77, 77);
         }
         
-        veHinhChuNhat(150);
-        // cứ 5 giây (5000ms) thì vẽ hình chữ nhật (dịch chuyển sang phải, đụng tường thì quay lui)
-        setInterval(veHinhChuNhat, 2000, 70);
-;
-        
+        // veHinhChuNhat(150);
+        // cứ 5 giây (5000ms) thì vẽ hình chữ nhật (dịch chuyển sang phải, đụng tường thì quay lui)               
+
+        function xuLyDiChuyenTraiPhai() {
+            diChuyenTraiPhai = setInterval(veHinhChuNhat, 500, 70);
+        }
+
+        function xuLyDungTraiPhai() {
+            if(diChuyenTraiPhai) {
+                clearInterval(diChuyenTraiPhai);
+            }
+        }
     </script>
 </body>
 </html>
