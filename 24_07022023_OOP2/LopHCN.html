@@ -10,6 +10,9 @@
     Dài: <input id="dai" type="number">
     Rộng: <input id="rong" type="number" />
     <button onclick="xuLyVe()">Vẽ hình</button>
+    <br>
+    <div id="ketqua"></div>
+    <br>
     <canvas id="myCanvas" width="800" height="600" style="border: 1px solid blue;"></canvas>
     <script>
         class Rectangle {
@@ -44,6 +47,8 @@
             let height = parseInt(document.getElementById("rong").value);
             let hinhChuNhat = new Rectangle(width, height, 'green');
             hinhChuNhat.display(context);
+
+            document.getElementById("ketqua").innerHTML = `Diện tích ${hinhChuNhat.calculateArea()}, chu vi ${hinhChuNhat.calculatePerimeter()}`;
         }
     </script>
 </body>
