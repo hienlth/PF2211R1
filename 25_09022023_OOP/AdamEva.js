@@ -31,7 +31,7 @@ class Human {
 
     setGender(genderValue) {
         //genderValue: true ==> Male, genderValue: false ==> Female
-        this.gender = gender;
+        this.gender = genderValue;
     }
 
     isMale() {
