@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Danh sách học viên</legend>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <td>STT</td>
+                    <td>Họ tên</td>
+                    <td>Số điện thoại</td>
+                    <td>Tiến trình</td>
+                    <td>Thao tác</td>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Thông tin học viên</legend>
+        <div>
+            Họ tên: <input id="hoTen" />
+        </div>
+        <div>
+            Số điện thoại: <input id="soDienThoai" >
+        </div>
+        <div>
+            Quá trình:
+            <input id="quaTrinh" />
+        </div>
+        <button>Tạo mới</button>
+        <button>Thêm</button>
+        <button>Cập nhật</button>
+    </fieldset>
+    <script>
+        class HocVien {
+            constructor(ten, sodt, diem) {
+                this.maHV = uuid();
+                this.HoTen = ten;
+                this.SoDT = sodt;
+                this.QuaTrinh = diem; // 0 ==> 1
+            }
+        }
+
+        let dsHocVien = [];
+    </script>
+</body>
+</html>
