@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+        class Point {
+            constructor(x, y) {
+              this.x = x;
+              this.y = y;
+            }
+          }
+          
+          class Circle {
+            constructor(_center, _r) {
+                this.center = _center; //tâm
+                this.r = _r;
+            }
+
+            draw(context) {
+                context.beginPath();
+                context.arc(this.center.x, this.center.y, this.r, 0, 2 * Math.PI);
+                context.stroke();
+            }
+          }
+
+          function distance(A,  B) {
+            return Math.sqrt(Math.pow(A.x - B.x, 2) + Math.pow(A.y - B.y, 2));
+          }
+          
+          function checkCollision( c1,  c2) {
+            return distance(c1.center, c2.center) <= c1.r + c2.r;
+          }
+
+          //Demo
+          let myCanvas = document.getElementById("myCanvas");
+          let ctx = myCanvas.getContext("2d");
+          let ht1 = new Circle(new Point(30, 30), 10);
+          let ht2 = new Circle(new Point(150, 150), 20);
+          ht1.draw(ctx);
+          ht2.draw(ctx);
+          console.log(checkCollision(ht1, ht2));
+          console.log(checkCollision(ht2, ht1));
+    </script>
+</body>
+</html>
